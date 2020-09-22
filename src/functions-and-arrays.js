@@ -1,17 +1,73 @@
 // Progression #1: Greatest of the two numbers
+  function greatestOfTwoNumbers(firstNum, secondNum){
+    if (firstNum > secondNum) {
+      return firstNum
+    } 
+    else {
+        return secondNum
+    }
+}
 
 // Progression #2: The lengthy word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
+function findScaryWord(words) {
+  let lengthy_word;
+  maxlength = 0;
+  if (words.length == 0)
+      return null;
+  for (var i = 0; i < words.length; i++) {
+      var len = words[i].length;
+      if (len > maxlength) {
+          maxlength = len;
+          lengthy_word = words[i];
+      }
+  }
+  return lengthy_word;
+}
+
 // Progression #3: Net Price
-const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+function netPrice(numbers) {
+  var sum = 0;
+  for (var i = 0; i < numbers.length; i++) 
+  {
+      sum = sum + numbers[i];
+
+  }
+  return sum;
+}
 
 // Progression #4: Calculate the average
 // Progression 4.1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+function midPointOfLevels(numbersAvg)
+{
+  var sum=0;
+  if(numbersAvg.length == 0)
+    return null;
+  for(var i=0; i<numbersAvg.length-1; i++)
+  {
+    sum += numbersAvg[i]; 
+  } 
+  return sum/(numbersAvg.length);
+}
+
 
 // Progression 4.2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+function averageWordLength (wordsArr)
+{
+  var sum1 =0;
+  if(wordsArr.length == 0)
+    return null;
+  for (let i = 0; i < wordsArr.length-1; i++) 
+  {
+    sum1 += wordsArr[i].length;
+  }
+  return sum1/(wordsArr.length);
+}
+
 
 // Progression #5: Unique arrays
 const wordsUnique = [
@@ -29,8 +85,31 @@ const wordsUnique = [
   'flour'
 ];
 
+  function uniqueArray (wordsUnique){
+    var uniqueArray = [];
+    
+    for(i=0; i < array.length; i++){
+        if(uniqueArray.indexOf(wordsUnique[i]) === -1) {
+            uniqueArray.push(wordsUnique[i]);
+        }
+    }
+    return uniqueArray;
+}
+var uniqueNames = uniqueArray (wordsUnique);
+console.log(uniqueNames);
+
+
 // Progression #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+function searchElement(wordsFind, x)
+{
+  if(wordsFind.length == 0)
+    return null;
+  if(wordsFind.includes(x))
+    return true;
+  else
+    return false;
+}
 
 // Progression #7: Count repetition
 const wordsCount = [
@@ -46,7 +125,19 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
-
+function howManyTimesElementRepeated(wordsCount,){
+  var words;
+  if(words.length==0){
+    return 0;
+  }
+  let count=0;
+  for(let i=0 ; i<words.length ;i++){
+    if(wordsCount == words[i]){
+      count++;
+    }
+  }
+    return count;
+}
 // Progression #8: Bonus
 
 const matrix = [
